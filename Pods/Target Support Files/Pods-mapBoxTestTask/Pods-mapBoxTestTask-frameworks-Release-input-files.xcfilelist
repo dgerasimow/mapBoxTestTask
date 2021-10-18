@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-mapBoxTestTask/Pods-mapBoxTestTask-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework
+${BUILT_PRODUCTS_DIR}/MapboxMobileEvents/MapboxMobileEvents.framework

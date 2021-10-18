@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,15 @@
 		EB0C13B52715B1F700C9AD9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB0C13B32715B1F700C9AD9F /* Main.storyboard */; };
 		EB0C13B72715B1F900C9AD9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB0C13B62715B1F900C9AD9F /* Assets.xcassets */; };
 		EB0C13BA2715B1F900C9AD9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB0C13B82715B1F900C9AD9F /* LaunchScreen.storyboard */; };
+		EBACC8FC271B3E4C0001D14F /* AuthorizationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBACC8FB271B3E4C0001D14F /* AuthorizationRequest.swift */; };
+		EBACC900271B3FB50001D14F /* AuthorizationStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBACC8FF271B3FB50001D14F /* AuthorizationStruct.swift */; };
+		EBACC905271B51C60001D14F /* FieldsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBACC904271B51C60001D14F /* FieldsRequest.swift */; };
+		EBACC907271B52D00001D14F /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBACC906271B52D00001D14F /* Field.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7AA9F381BBAF8F1E16E54499 /* Pods-mapBoxTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mapBoxTestTask.release.xcconfig"; path = "Target Support Files/Pods-mapBoxTestTask/Pods-mapBoxTestTask.release.xcconfig"; sourceTree = "<group>"; };
+		84C14751B1ABB18761009ECE /* Pods-mapBoxTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mapBoxTestTask.debug.xcconfig"; path = "Target Support Files/Pods-mapBoxTestTask/Pods-mapBoxTestTask.debug.xcconfig"; sourceTree = "<group>"; };
 		EB0C13AA2715B1F700C9AD9F /* mapBoxTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mapBoxTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB0C13AD2715B1F700C9AD9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB0C13AF2715B1F700C9AD9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,10 @@
 		EB0C13B62715B1F900C9AD9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB0C13B92715B1F900C9AD9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB0C13BB2715B1F900C9AD9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBACC8FB271B3E4C0001D14F /* AuthorizationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRequest.swift; sourceTree = "<group>"; };
+		EBACC8FF271B3FB50001D14F /* AuthorizationStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationStruct.swift; sourceTree = "<group>"; };
+		EBACC904271B51C60001D14F /* FieldsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsRequest.swift; sourceTree = "<group>"; };
+		EBACC906271B52D00001D14F /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,11 +47,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CC7B3250E0F742EE598A4F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55B668AFC59631BB21EEB2EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84C14751B1ABB18761009ECE /* Pods-mapBoxTestTask.debug.xcconfig */,
+				7AA9F381BBAF8F1E16E54499 /* Pods-mapBoxTestTask.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EB0C13A12715B1F700C9AD9F = {
 			isa = PBXGroup;
 			children = (
 				EB0C13AC2715B1F700C9AD9F /* mapBoxTestTask */,
 				EB0C13AB2715B1F700C9AD9F /* Products */,
+				55B668AFC59631BB21EEB2EC /* Pods */,
+				3CC7B3250E0F742EE598A4F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +84,9 @@
 		EB0C13AC2715B1F700C9AD9F /* mapBoxTestTask */ = {
 			isa = PBXGroup;
 			children = (
+				EBACC901271B51480001D14F /* models */,
+				EBACC8FE271B3F990001D14F /* structs */,
+				EBACC8F8271B3E2F0001D14F /* requests */,
 				EB0C13AD2715B1F700C9AD9F /* AppDelegate.swift */,
 				EB0C13AF2715B1F700C9AD9F /* SceneDelegate.swift */,
 				EB0C13B12715B1F700C9AD9F /* ViewController.swift */,
@@ -67,6 +98,31 @@
 			path = mapBoxTestTask;
 			sourceTree = "<group>";
 		};
+		EBACC8F8271B3E2F0001D14F /* requests */ = {
+			isa = PBXGroup;
+			children = (
+				EBACC8FB271B3E4C0001D14F /* AuthorizationRequest.swift */,
+				EBACC904271B51C60001D14F /* FieldsRequest.swift */,
+			);
+			path = requests;
+			sourceTree = "<group>";
+		};
+		EBACC8FE271B3F990001D14F /* structs */ = {
+			isa = PBXGroup;
+			children = (
+				EBACC8FF271B3FB50001D14F /* AuthorizationStruct.swift */,
+				EBACC906271B52D00001D14F /* Field.swift */,
+			);
+			path = structs;
+			sourceTree = "<group>";
+		};
+		EBACC901271B51480001D14F /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +130,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB0C13BE2715B1F900C9AD9F /* Build configuration list for PBXNativeTarget "mapBoxTestTask" */;
 			buildPhases = (
+				7B6884914AFEEB7AB08EFDB3 /* [CP] Check Pods Manifest.lock */,
 				EB0C13A62715B1F700C9AD9F /* Sources */,
 				EB0C13A72715B1F700C9AD9F /* Frameworks */,
 				EB0C13A82715B1F700C9AD9F /* Resources */,
+				24EA3ADDBF3545040DDF918A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +190,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		24EA3ADDBF3545040DDF918A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mapBoxTestTask/Pods-mapBoxTestTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mapBoxTestTask/Pods-mapBoxTestTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mapBoxTestTask/Pods-mapBoxTestTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B6884914AFEEB7AB08EFDB3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mapBoxTestTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EB0C13A62715B1F700C9AD9F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,7 +239,11 @@
 			files = (
 				EB0C13B22715B1F700C9AD9F /* ViewController.swift in Sources */,
 				EB0C13AE2715B1F700C9AD9F /* AppDelegate.swift in Sources */,
+				EBACC907271B52D00001D14F /* Field.swift in Sources */,
+				EBACC905271B51C60001D14F /* FieldsRequest.swift in Sources */,
 				EB0C13B02715B1F700C9AD9F /* SceneDelegate.swift in Sources */,
+				EBACC900271B3FB50001D14F /* AuthorizationStruct.swift in Sources */,
+				EBACC8FC271B3E4C0001D14F /* AuthorizationRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +306,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -283,11 +388,13 @@
 		};
 		EB0C13BF2715B1F900C9AD9F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84C14751B1ABB18761009ECE /* Pods-mapBoxTestTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9R54UUJXYS;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(EXCLUDED_ARCHS__EFFECTIVE_PLATFORM_SUFFIX_$(EFFECTIVE_PLATFORM_SUFFIX)__NATIVE_ARCH_64_BIT_$(NATIVE_ARCH_64_BIT)__XCODE_$(XCODE_VERSION_MAJOR)) arm64";
 				INFOPLIST_FILE = mapBoxTestTask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,16 +409,20 @@
 		};
 		EB0C13C02715B1F900C9AD9F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AA9F381BBAF8F1E16E54499 /* Pods-mapBoxTestTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9R54UUJXYS;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(EXCLUDED_ARCHS__EFFECTIVE_PLATFORM_SUFFIX_$(EFFECTIVE_PLATFORM_SUFFIX)__NATIVE_ARCH_64_BIT_$(NATIVE_ARCH_64_BIT)__XCODE_$(XCODE_VERSION_MAJOR)) arm64";
 				INFOPLIST_FILE = mapBoxTestTask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = ITIS.mapBoxTestTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
